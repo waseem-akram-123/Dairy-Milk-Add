@@ -1,77 +1,98 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    border: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Fixed syntax error */
 }
-body{
+
+body {
     background-image: url("chocolate.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 1000px;
+    background-size: cover; /* This is already covered */
     background-attachment: fixed; 
-    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh; /* Ensures the body takes full viewport height */
     opacity: 0.8;
-
 }
+
 .container {
-    /* background-color: aqua; */
-    height: 700px;
-    width: 600px;
+    height: auto; /* Set to auto for flexible height */
+    width: 90%; /* Use a percentage to make it responsive */
+    max-width: 600px; /* Limit the max width */
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    position: absolute;
-    top: 80px;
-    left: 480px;
+    position: relative; /* Changed to relative */
+    padding: 20px; /* Added padding for spacing */
     border: 2px dotted black;
     border-radius: 20px;
-    background-color: rgb(236, 221, 221,0.5);
+    background-color: rgba(236, 221, 221, 0.5); /* Use rgba for transparency */
     color: black;
     font-weight: bold;
+    margin: 20px; /* Added margin for spacing */
 }
+
 p {
-    /* background-color: aquamarine; */
-    height: 200px;
-    width: 400px;
+    width: 100%; /* Full width of the container */
     text-align: center;
-    font-size: 20px;
-    font-family: "lucida Handwriting"; 
+    font-size: 2.5vw; /* Responsive font size */
+    font-family: "Lucida Handwriting"; 
     border-radius: 10px;
-    font-size: 25px;
-    /* color: whitesmoke; */
     animation: color 3s ease-in-out 15s infinite;
 }
+
 #btn {
-    height: 200px;
-    width: 400px;
+    width: 100%; /* Full width of the container */
     text-align: center;
-    font-size: 35px;
-    padding: 1px;
+    font-size: 3vw; /* Responsive font size */
+    padding: 10px; /* Adjusted padding */
     background-color: transparent;
     border: none;
-    /* color: whitesmoke; */
 }
-#btn :hover {
-    border: 1px solid purple;
+
+#btn:hover {
+    border: 1px solid purple; /* Fixed hover selector */
 }
+
 @keyframes color {
-    0%{
+    0% {
         color: black;
     }
-    25%{
+    25% {
         color: darkblue;
     }
-    50%{
+    50% {
         color: purple;
     }
-    75%{
+    75% {
         color: red;
     }
-    100%{
+    100% {
         color: yellow;
+    }
+}
+
+/* Media Queries for further responsiveness */
+@media (max-width: 768px) {
+    p {
+        font-size: 5vw; /* Adjust font size for smaller screens */
+    }
+    #btn {
+        font-size: 5vw; /* Adjust button size */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px; /* Adjust padding for small screens */
+    }
+    p {
+        font-size: 6vw; /* Further adjust font size */
+    }
+    #btn {
+        font-size: 6vw; /* Further adjust button size */
     }
 }
