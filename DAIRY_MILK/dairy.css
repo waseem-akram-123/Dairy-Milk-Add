@@ -1,0 +1,77 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    border: border-box;
+}
+body{
+    background-image: url("chocolate.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1000px;
+    background-attachment: fixed; 
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.8;
+
+}
+.container {
+    /* background-color: aqua; */
+    height: 700px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    top: 80px;
+    left: 480px;
+    border: 2px dotted black;
+    border-radius: 20px;
+    background-color: rgb(236, 221, 221,0.5);
+    color: black;
+    font-weight: bold;
+}
+p {
+    /* background-color: aquamarine; */
+    height: 200px;
+    width: 400px;
+    text-align: center;
+    font-size: 20px;
+    font-family: "lucida Handwriting"; 
+    border-radius: 10px;
+    font-size: 25px;
+    /* color: whitesmoke; */
+    animation: color 3s ease-in-out 15s infinite;
+}
+#btn {
+    height: 200px;
+    width: 400px;
+    text-align: center;
+    font-size: 35px;
+    padding: 1px;
+    background-color: transparent;
+    border: none;
+    /* color: whitesmoke; */
+}
+#btn :hover {
+    border: 1px solid purple;
+}
+@keyframes color {
+    0%{
+        color: black;
+    }
+    25%{
+        color: darkblue;
+    }
+    50%{
+        color: purple;
+    }
+    75%{
+        color: red;
+    }
+    100%{
+        color: yellow;
+    }
+}
